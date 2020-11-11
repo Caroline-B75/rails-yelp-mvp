@@ -1,0 +1,6 @@
+<h1>Add a review for the @restaurant.name:</h1>
+<%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%= f.input :content, error: 'Please write a review'  %>
+  <%= f.input :rating, as: :select, collection: [0, 1, 2, 3, 4, 5], prompt: 'Your rating', error: 'A rating please'  %>
+  <%= f.submit "Add your review", class: "btn btn-primary" %>
+<% end %>
